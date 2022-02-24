@@ -18,10 +18,12 @@ import { MatSelectModule } from '@angular/material/select';
 
 
 import { AppComponent } from './app.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
