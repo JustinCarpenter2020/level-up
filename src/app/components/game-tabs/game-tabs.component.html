@@ -3,40 +3,46 @@
     <mat-tab label="About">
       <p class="game-tabs-par">
         platforms:
-        <span>PC</span>
+        <span *ngFor="let p of game.parent_platforms; let last = last">{{p.platform.name}}
+          <span *ngIf="!last">, </span>
+        </span>
       </p>
       <p class="game-tabs-par">
         Publishers:
-        <span>Konami</span>
+        <span *ngFor="let p of game.publishers; let last = last">{{p.name}}
+          <span *ngIf="!last">, </span>
+        </span>
       </p>
       <p class="game-tabs-par">
         Website:
-        <a class="game-tabs-link" href="#" target="_blank">link</a>
+        <a class="game-tabs-link" [href]="game.website" target="_blank">Visit</a>
       </p>
-      <div class="game-description">
-        skdfjslkdjfks
+      <div class="game-description" [innerHTML]="game.description">
       </div>
       <p class="game-tabs-votes">
-        <span>
-          <mat-icon class="game-votes-up">thumb_up</mat-icon>
-          <span class="game-votes-count">55</span>
-        </span>
-        <span>
-          <mat-icon class="game-votes-down">thumb_down</mat-icon>
-          <span class="game-votes-count">24</span>
-        </span>
+        <ng-container *ngFor="let rating of game.ratings">
+          <span *ngIf="rating.title === 'exceptional'">
+            <mat-icon class="game-votes-up">thumb_up</mat-icon>
+            <span class="game-votes-count">{{rating.count || 0}}</span>
+          </span>
+          <span *ngIf="rating.title === 'skip'">
+            <mat-icon class="game-votes-down">thumb_down</mat-icon>
+            <span class="game-votes-count">{{rating.count || 0}}</span>
+          </span>
+        </ng-container>
       </p>
     </mat-tab>
 
-    <mat-tab label="Screenshots">
-      <img class="game-screenshot" src="https://compass-ssl.xbox.com/assets/e1/7c/e17cbce8-4ab8-4f27-a684-082435c69057.jpg?n=Borderlands-3_Gallery_1350x759_01.jpg" alt="">
+    <mat-tab label="Screenshots" *ngIf="game.short_screenshots?.length">
+      <img class="game-screenshot" *ngFor="let i of game.short_screenshots" [src]="i.image" alt="">
     </mat-tab>
 
-    <mat-tab label="trailers">
-      <video class="game-trailer" controls>
-        <source src="" type="video/mp4" />
+    <mat-tab label="trailers" *ngIf="game.trailers?.length">
+      <video class="game-trailer" controls *ngFor="v of game.trailers">
+        <source src="v.data?.max" type="video/mp4" />
         Your Browser Does Not Support The Video Tag
       </video>
     </mat-tab>
   </mat-tab-group>
 </div>
+

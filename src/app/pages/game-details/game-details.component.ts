@@ -22,7 +22,7 @@ export class GameDetailsComponent implements OnInit {
     parent_platforms: [],
     publishers: [],
     ratings: [],
-    screenshots: [],
+    short_screenshots: [],
     trailers: [],
     id: ''
   };
@@ -44,6 +44,8 @@ export class GameDetailsComponent implements OnInit {
   getGameDetails(gameId: string) {
     this.gameSub =  this.gameService.getGameById(gameId).subscribe((g) => {
       this.game = g;
+      console.log(g);
+
     })
     setTimeout(() => {
       this.gameRating = this.game.metacritic;

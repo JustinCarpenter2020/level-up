@@ -20,7 +20,7 @@ export class GameComponent implements OnInit {
     parent_platforms: [],
     publishers: [],
     ratings: [],
-    screenshots: [],
+    short_screenshots: [],
     trailers: [],
     id: ''
   };

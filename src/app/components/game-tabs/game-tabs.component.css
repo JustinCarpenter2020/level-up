@@ -33,9 +33,11 @@
 
 .game-votes-up {
     color: #5ee432;
+    margin-left: 10px;
   }
   .game-votes-down {
     color: #ef4655;
+    margin-left: 10px;
   }
 
   .game-count {
@@ -50,7 +52,7 @@
 
 .game-screenshot {
   margin-top: 5px;
-  width: calc(80% - 10px);
+  width: calc(50% - 10px);
 
   /* .game:nth-child(even) {
     margin-left: 10px;
