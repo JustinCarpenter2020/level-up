@@ -26,9 +26,8 @@ export class GameDetailsComponent implements OnInit {
     trailers: [],
     id: ''
   };
-
+  public gameRating: number = 0;
   public gameId: string = '';
-
   public routeSub: Subscription | undefined;
   public gameSub: Subscription | undefined;
 
@@ -47,6 +46,18 @@ export class GameDetailsComponent implements OnInit {
       this.game = g;
       console.log(g)
     })
+  }
+
+  getColor(value: number): string{
+    if (value > 75) {
+      return '#5ee432';
+    } else if (value > 50) {
+      return '#fffa50';
+    } else if (value > 30) {
+      return '#f7aa38';
+    } else {
+      return '#ef4655';
+    }
   }
 
 
