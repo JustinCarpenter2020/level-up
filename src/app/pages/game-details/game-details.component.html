@@ -1,6 +1,6 @@
 <div class="details">
   <div class="game-banner">
-    <img class="game-banner-img" src="https://cdn.2kgames.com/borderlands/news/Article+Embeds/YearInReview/yearinreview-960.jpg" alt="banner image">
+    <img class="game-banner-img" [src]="game.background_image" alt="banner image">
   </div>
   <div class="game-content">
     <div class="details-wrapper">
@@ -32,6 +32,7 @@
           >
         </div>
       </div>
+      <app-game-tabs></app-game-tabs>
     </div>
   </div>
 
