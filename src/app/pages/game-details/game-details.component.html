@@ -5,10 +5,12 @@
   <div class="game-content">
     <div class="details-wrapper">
       <div class="game-header">
-        <h1 class="game-header-title"> Game name</h1>
-        <h2 class="game-header-release-date">date</h2>
-        <p class="game-header-generes">
-          <span>RPG</span>
+        <h1 class="game-header-title"> {{game.name}}</h1>
+        <h2 class="game-header-release-date">{{game.released}}</h2>
+        <p class="game-header-genres">
+          <span *ngFor="let g of game.genres; let last = last">{{g.name}}
+            <span *ngIf="!last">, </span>
+          </span>
         </p>
         <div class="game-gauge">
           <mwl-gauge

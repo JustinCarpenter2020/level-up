@@ -44,8 +44,10 @@ export class GameDetailsComponent implements OnInit {
   getGameDetails(gameId: string) {
     this.gameSub =  this.gameService.getGameById(gameId).subscribe((g) => {
       this.game = g;
-      console.log(g)
     })
+    setTimeout(() => {
+      this.gameRating = this.game.metacritic;
+    }, 1000);
   }
 
   getColor(value: number): string{
