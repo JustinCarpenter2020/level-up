@@ -16,15 +16,15 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
       if(params["game-search"]){
-        this.searchGame('metacritic', params["game-search"]);
+        this.searchGames('metacritic', params["game-search"]);
       } else{
-        this.searchGame('metacritic')
+        this.searchGames('metacritic')
       }
     })
   }
 
 
-  searchGame(sort: string, search?: string) {
+  searchGames(sort: string, search?: string) {
     this.gameService.getGames(sort, search).subscribe((gameList: APIResponse<Game>) => {
       this.games = gameList.results
     console.log(gameList.results);
