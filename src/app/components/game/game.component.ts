@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Game } from 'src/app/models/game';
 
 @Component({
@@ -20,11 +21,17 @@ export class GameComponent implements OnInit {
     publishers: [],
     ratings: [],
     screenshots: [],
-    trailers: []
+    trailers: [],
+    id: ''
   };
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+
+  goToDetails(id: string): void{
+    this.router.navigate(['game', id])
   }
 
 }

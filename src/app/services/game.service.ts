@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { environment as env } from 'src/environments/environment';
 import { APIResponse, Game } from '../models/game';
 @Injectable({
@@ -19,5 +19,10 @@ export class GameService {
     }
 
     return this.http.get<APIResponse<Game>>(`${env.BASE_URL}/games`, {params: params});
+  }
+
+
+  getGameById(id: string): Observable<Game>{
+    return this.http.get<Game>(`${env.BASE_URL}/games/${id}`)
   }
 }

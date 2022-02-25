@@ -23,13 +23,15 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { GameComponent } from './components/game/game.component';
+import { GameDetailsComponent } from './pages/game-details/game-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     HomePageComponent,
-    GameComponent
+    GameComponent,
+    GameDetailsComponent
   ],
   imports: [
     BrowserModule,
