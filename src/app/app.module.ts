@@ -22,12 +22,14 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
+import { GameComponent } from './components/game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    HomePageComponent
+    HomePageComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

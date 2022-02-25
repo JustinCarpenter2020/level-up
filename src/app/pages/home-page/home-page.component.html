@@ -19,15 +19,5 @@
 </div>
 
 <div class="games">
-  <div class="game">
-    <div class="game-thumb-container">
-      <img class="game-thumbnail" src="https://image.api.playstation.com/vulcan/ap/rnd/202010/2323/p50N4PBK9rNanGYKFecTvac5.png" alt="thumbnail">
-    </div>
-    <div class="game-description">
-      <p class="game-name">Name</p>
-      <div class="game-platfroms">
-        <img class="game-platform" src="https://wallpapercave.com/wp/wp2605496.jpg" alt="platfrom">
-      </div>
-    </div>
-  </div>
+  <app-game *ngFor="let g of games" [game]="g"></app-game>
 </div>
