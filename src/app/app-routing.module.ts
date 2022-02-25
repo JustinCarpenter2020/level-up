@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePageComponent
+  },
+  {
+    path: 'search/:game-search',
+    component: HomePageComponent
   }
 ];
 
