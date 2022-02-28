@@ -28,12 +28,18 @@ export class GameService {
     const gameTrailersRequest = this.http.get(
       `${env.BASE_URL}/games/${id}/movies`
     );
-    return forkJoin({ gameInfoRequest, gameScreenshotsRequest, gameTrailersRequest}).pipe(map((resp: any) => {
-      return {
-        ...resp['gameInfoRequest'],
+     return forkJoin({
+      gameInfoRequest,
+      gameScreenshotsRequest,
+      gameTrailersRequest,
+    }).pipe(
+      map((resp: any) => {
+        return {
+          ...resp['gameInfoRequest'],
           screenshots: resp['gameScreenshotsRequest']?.results,
-          trailers: resp['gameTrailerRequest']?.results
-      }
-    }));
+          trailers: resp['gameTrailersRequest']?.results,
+        };
+      })
+    );
   }
 }
