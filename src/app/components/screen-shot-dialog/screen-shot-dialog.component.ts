@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Inject, OnInit } from '@angular/core';
+import { Game } from 'src/app/models/game';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog'
 @Component({
   selector: 'app-screen-shot-dialog',
   templateUrl: './screen-shot-dialog.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenShotDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
   }

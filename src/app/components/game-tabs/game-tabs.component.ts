@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Game } from 'src/app/models/game';
+import {MatDialog} from '@angular/material/dialog';
+import { ScreenShotDialogComponent } from '../screen-shot-dialog/screen-shot-dialog.component';
 
 @Component({
   selector: 'app-game-tabs',
@@ -23,14 +25,22 @@ export class GameTabsComponent implements OnInit {
     trailers: [],
     id: ''
   };
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
 
   }
 
-  toggleDialog(){
+  toggleDialog(index: number){
+    console.log(index);
 
+    const dialogRef = this.dialog.open(ScreenShotDialogComponent, {
+      width: '1000px',
+      data: {
+        name: this.game.name,
+      image: this.game.screenshots[index].image
+    }
+    });
   }
 
 }
