@@ -4,6 +4,10 @@
   padding-left: 20px;
 }
 
+.bg-primary{
+  background-color: #3f51b5;
+}
+
 .games {
   display: flex;
   flex-wrap: wrap;
