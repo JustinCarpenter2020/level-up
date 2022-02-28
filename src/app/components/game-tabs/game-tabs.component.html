@@ -33,13 +33,13 @@
       </p>
     </mat-tab>
 
-    <mat-tab label="Screenshots" *ngIf="game.short_screenshots?.length">
-      <img class="game-screenshot" *ngFor="let i of game.short_screenshots" [src]="i.image" alt="">
+    <mat-tab label="Screenshots" *ngIf="game.screenshots?.length">
+      <img class="game-screenshot" *ngFor="let i of game.screenshots" [src]="i.image" alt="">
     </mat-tab>
 
     <mat-tab label="trailers" *ngIf="game.trailers?.length">
-      <video class="game-trailer" controls *ngFor="v of game.trailers">
-        <source src="v.data?.max" type="video/mp4" />
+      <video class="game-trailer" controls *ngFor="let v of game.trailers">
+        <source src="{{v.data?.max}}" type="video/mp4" />
         Your Browser Does Not Support The Video Tag
       </video>
     </mat-tab>

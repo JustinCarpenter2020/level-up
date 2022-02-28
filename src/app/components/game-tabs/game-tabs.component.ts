@@ -19,7 +19,7 @@ export class GameTabsComponent implements OnInit {
     parent_platforms: [],
     publishers: [],
     ratings: [],
-    short_screenshots: [],
+    screenshots: [],
     trailers: [],
     id: ''
   };
