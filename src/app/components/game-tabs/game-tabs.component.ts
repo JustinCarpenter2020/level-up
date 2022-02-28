@@ -38,7 +38,8 @@ export class GameTabsComponent implements OnInit {
       width: '1000px',
       data: {
         name: this.game.name,
-      image: this.game.screenshots[index].image
+        screenshots: this.game.screenshots,
+        index: index
     }
     });
   }

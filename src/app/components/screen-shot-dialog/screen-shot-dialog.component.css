@@ -7,3 +7,13 @@
 .mat-dialog-content{
   max-height: none;
 }
+
+
+.justify-content-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+.close{
+  cursor: pointer;
+}

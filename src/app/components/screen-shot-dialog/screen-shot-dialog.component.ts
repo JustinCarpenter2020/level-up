@@ -13,4 +13,13 @@ export class ScreenShotDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeImage(incrementer: string){
+    if(incrementer == "decrement" && this.data.index > 0){
+      this.data.index--
+    }
+    if(incrementer == "increment" && this.data.index < (this.data.screenshots.length -1)){
+      this.data.index++
+    }
+  }
+
 }

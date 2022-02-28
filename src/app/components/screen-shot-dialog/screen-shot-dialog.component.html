@@ -1,7 +1,10 @@
-<h2 mat-dialog-title>{{data.name}}</h2>
+<div class="justify-content-between">
+  <h2 mat-dialog-title>{{data.name}}</h2> <span class="close" mat-dialog-close title="close">X</span>
+</div>
 <mat-dialog-content class="mat-typography">
-  <img class="img-fluid" src="{{data.image}}" alt="">
+  <img class="img-fluid" src="{{data.screenshots[data.index].image}}" alt="">
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>close</button>
+<mat-dialog-actions align="center">
+  <button mat-button (click)="changeImage('decrement')"><</button>
+  <button mat-button (click)="changeImage('increment')" >></button>
 </mat-dialog-actions>
