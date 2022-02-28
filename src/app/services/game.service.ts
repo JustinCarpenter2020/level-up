@@ -28,6 +28,7 @@ export class GameService {
     const gameTrailersRequest = this.http.get(
       `${env.BASE_URL}/games/${id}/movies`
     );
+    //Fork Join allows the bundling of multiple observables, since we have to make three calls to the api for sperate data we then join that data and map it into a single object.
      return forkJoin({
       gameInfoRequest,
       gameScreenshotsRequest,
