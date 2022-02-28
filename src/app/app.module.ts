@@ -25,6 +25,7 @@ import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { GameComponent } from './components/game/game.component';
 import { GameDetailsComponent } from './pages/game-details/game-details.component';
 import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
+import { ScreenShotDialogComponent } from './components/screen-shot-dialog/screen-shot-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
     HomePageComponent,
     GameComponent,
     GameDetailsComponent,
-    GameTabsComponent
+    GameTabsComponent,
+    ScreenShotDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
   <div class="game-description">
     <p class="game-name">{{game.name}}</p>
     <div class="game-platfroms">
-      <img class="game-platform" *ngFor="let i of game.parent_platforms" src="assets/platforms/{{i.platform.name.split(' ')[0].toLowerCase()}}.svg" alt="platfrom">
+      <img class="game-platform" *ngFor="let i of game.parent_platforms" src="assets/platforms/{{i.platform.name.split(' ')[0].toLowerCase()}}.svg" alt="platfrom" title="{{i.platform.name}}">
     </div>
   </div>
 </div>

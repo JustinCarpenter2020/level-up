@@ -29,4 +29,8 @@ export class GameTabsComponent implements OnInit {
 
   }
 
+  toggleDialog(){
+
+  }
+
 }
