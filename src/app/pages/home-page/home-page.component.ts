@@ -16,9 +16,9 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
       if(params["game-search"]){
-        this.searchGames('rating', params["game-search"]);
+        this.searchGames('-added', params["game-search"]);
       } else{
-        this.searchGames('rating')
+        this.searchGames('-added')
       }
     })
   }
