@@ -1,3 +1,22 @@
+.header-img{
+  background-image: url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmlkZW8lMjBnYW1lfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  border-radius: 5px;
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80%;
+}
+
+
+.header{
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+
+
 .filters{
   max-width: 1200px;
   margin: 20px auto;
