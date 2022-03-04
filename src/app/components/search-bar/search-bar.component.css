@@ -1,7 +1,7 @@
 .search-container{
   width: 100%;
   height: 60px;
-  background-color: #323a45;
+  background-color: #383961;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -13,9 +13,12 @@
 }
 
 
+
+
 .search-form{
   width: 100%;
-  max-width: 1200px;
+ margin-right: 10px;
+  text-align: end;
 }
 
 .search-input{
@@ -31,7 +34,7 @@
 .search-button{
   border: none;
   outline: none;
-  background: #3f51b5;
+  background: #4CB5AE;
   color: #fff;
   padding: 10px;
   border-left: 1px solid rgba(0, 0, 0, 0.3);

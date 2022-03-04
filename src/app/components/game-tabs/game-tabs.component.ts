@@ -32,8 +32,6 @@ export class GameTabsComponent implements OnInit {
   }
 
   toggleDialog(index: number){
-    console.log(index);
-
     const dialogRef = this.dialog.open(ScreenShotDialogComponent, {
       width: '1000px',
       data: {
