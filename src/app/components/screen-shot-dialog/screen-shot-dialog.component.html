@@ -5,6 +5,6 @@
   <img class="img-fluid" src="{{data.screenshots[data.index].image}}" alt="">
 </mat-dialog-content>
 <mat-dialog-actions align="center">
-  <button mat-button mat-icon-button (click)="changeImage('decrement')"><mat-icon>keyboard_arrow_left</mat-icon></button>
-  <button mat-button mat-icon-button (click)="changeImage('increment')" ><mat-icon>keyboard_arrow_right</mat-icon></button>
+  <button mat-button mat-icon-button class="btn" (click)="changeImage('decrement')" title="view previous image"><mat-icon>keyboard_arrow_left</mat-icon></button>
+  <button mat-button mat-icon-button class="btn" (click)="changeImage('increment')" title="view next image"><mat-icon>keyboard_arrow_right</mat-icon></button>
 </mat-dialog-actions>

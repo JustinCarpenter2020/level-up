@@ -53,10 +53,7 @@
 .game-screenshot {
   margin-top: 5px;
   width: calc(50% - 10px);
-
-  /* .game:nth-child(even) {
-    margin-left: 10px;
-  } */
+  cursor: pointer;
 }
 
 .game-trailer {
